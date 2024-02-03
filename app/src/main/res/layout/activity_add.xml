@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".AddActivity">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edt_food_name"
+        android:hint="Taom nomi:"
+        android:textSize="25sp"
+        android:background="@drawable/edit_background"
+        android:padding="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/edt_maxsulotlar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/edt_maxsulotlar"
+        android:hint="Kerakli maxsulotlar:"
+        android:textSize="25sp"
+        android:gravity="start"
+        app:layout_constraintHeight_percent="0.2"
+        android:padding="20dp"
+        android:textAlignment="textStart"
+        android:background="@drawable/edit_background"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/edt_taom_tayyorlash_tartibi"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edt_food_name"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/edt_taom_tayyorlash_tartibi"
+        android:hint="Taom tayyorlash tartibi:"
+        android:textSize="25sp"
+        android:padding="20dp"
+        android:gravity="start"
+        android:textAlignment="textStart"
+        app:layout_constraintHeight_percent="0.4"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btn_save"
+        app:layout_constraintTop_toBottomOf="@id/edt_maxsulotlar"
+        android:background="@drawable/edit_background"/>
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Saqlash"
+        android:backgroundTint="#4CAF50"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintWidth_percent="0.35"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintTop_toBottomOf="@id/edt_taom_tayyorlash_tartibi"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
